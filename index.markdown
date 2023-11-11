@@ -4,3 +4,15 @@
 
 layout: home
 ---
+
+<h1>Site Data Keys</h1>
+<ul>
+{% for data in site.data.videos.keys %}
+  <li>{{ data[0] }}: {{ data[1] | inspect }}</li>
+{% endfor %}
+</ul>
+
+<h2>Leadership</h2>
+{% for post in site.data.videos.Leadership %}
+<li><a href="{{ post.link }}" target="_blank">{{ post.title }}</a></li>
+{% endfor %}
